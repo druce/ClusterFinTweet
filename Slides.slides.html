@@ -11924,13 +11924,33 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Source-Data:">Source Data:<a class="anchor-link" href="#Source-Data:">&#182;</a></h1><ul>
 <li>Panel of ~600 Financial Twitter Screen Names</li>
-<li>Identify and follow most influential users who frequently share financial news</li>
-<li>250,000 URLs shared October 2017-mid-November 2018</li>
 </ul>
 
 </div>
 </div>
 </div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Identify and follow most influential users who frequently share financial news</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>250,000 URLs shared October 2017-mid-November 2018</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12220,8 +12240,7 @@ s_p_500 earnings season update november 2018</code></pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="4.-Topic-analysis">4. Topic analysis<a class="anchor-link" href="#4.-Topic-analysis">&#182;</a></h1><ul>
-<li><p>Train corpus on 80 Topics</p>
-<ul>
+<li>Train corpus on 80 Topics<ul>
 <li>LSI (Latent Semantic Indexing)</li>
 <li>NMF (Non-negative Matrix Factorization)</li>
 <li>LDA (Latent Dirichlet Allocation)<ul>
@@ -12245,7 +12264,7 @@ s_p_500 earnings season update november 2018</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Start-W2V-training">Start W2V training<a class="anchor-link" href="#Start-W2V-training">&#182;</a></h2><p><img src="w2v1.png" alt="w2v1.png"></p>
+<h2 id="Start-Word2vec-training">Start Word2vec training<a class="anchor-link" href="#Start-Word2vec-training">&#182;</a></h2><p><img src="w2v1.png" alt="w2v1.png"></p>
 
 </div>
 </div>
@@ -12254,16 +12273,7 @@ s_p_500 earnings season update november 2018</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="End-W2V-training">End W2V training<a class="anchor-link" href="#End-W2V-training">&#182;</a></h2><p><img src="w2v2.png" alt="w2v2.png"></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="4.-Topic-Analysis">4. Topic Analysis<a class="anchor-link" href="#4.-Topic-Analysis">&#182;</a></h1><p>Each doc is now represented by vectors, make plots to see how well they perform</p>
+<h2 id="End-Word2vec-training">End Word2vec training<a class="anchor-link" href="#End-Word2vec-training">&#182;</a></h2><p><img src="w2v2.png" alt="w2v2.png"></p>
 
 </div>
 </div>
@@ -12400,7 +12410,7 @@ s_p_500 earnings season update november 2018</code></pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="4.-Topic-Analysis">4. Topic Analysis<a class="anchor-link" href="#4.-Topic-Analysis">&#182;</a></h1><ul>
-<li>Concatenate document vectors from all 3 (LDI, NMF, Word2vec): 460 columns</li>
+<li>Concatenate document vectors from all 3 (LDI, NMF, average Word2vec by document): 460 columns</li>
 <li>PCA to 80 columns</li>
 <li>Plot topics with TSNE</li>
 </ul>
@@ -12457,8 +12467,25 @@ s_p_500 earnings season update november 2018</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="5.-Cluster-Analysis">5. Cluster Analysis<a class="anchor-link" href="#5.-Cluster-Analysis">&#182;</a></h1><p>Cluster screen names</p>
-<ul>
+<h1 id="5.-Cluster-Analysis---Headlines">5. Cluster Analysis - Headlines<a class="anchor-link" href="#5.-Cluster-Analysis---Headlines">&#182;</a></h1><p><img src="Silhouette1.png" alt="Silhoutte1.png"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="5.-Cluster-Analysis---Headlines">5. Cluster Analysis - Headlines<a class="anchor-link" href="#5.-Cluster-Analysis---Headlines">&#182;</a></h1><p><img src="Silhouette2.png" alt="Silhoutte2.png"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="5.-Cluster-Analysis---Users">5. Cluster Analysis - Users<a class="anchor-link" href="#5.-Cluster-Analysis---Users">&#182;</a></h1><ul>
 <li>For each FinTweep, average the vectors across all headlines they shared</li>
 </ul>
 
